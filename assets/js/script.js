@@ -2,7 +2,7 @@ const apiKey = "cdb804a88e1d26fa714b6edd895a5dff";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 const searchBox = document.getElementById("search_input");
-// const searchBtn = document.getElementById("search_btn");
+const searchBtn = document.getElementById("search_btn");
 const weatherIcon = document.querySelector(".weather-icon"); 
 
 async function checkWeather(city){
@@ -34,13 +34,9 @@ async function checkWeather(city){
 }
 
 
-
-
-// searchBtn.addEventListener('click', ()=>{
-//     checkWeather(searchBox.value);
-// })
-
-
+searchBtn.addEventListener('click', ()=>{
+    checkWeather(searchBox.value);
+})
 
 searchBox.addEventListener("keypress", function(event) {
 
